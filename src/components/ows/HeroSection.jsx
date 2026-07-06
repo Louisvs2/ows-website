@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
-import owsLogo from "@/assets/ows-logo.svg";
+import owsLogo from "@/assets/ows-logo.png";
 
 const BG_VIDEO = "https://media.base44.com/videos/public/6a4bbdb2a3cc8316b36507ce/3921060a0_ScreenRecording_07-06-202617-30-35_1.mov";
 

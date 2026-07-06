@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import owsLogo from "@/assets/ows-logo.svg";
+import owsLogo from "@/assets/ows-logo.png";
 
 const NAV_LINKS = [
   { label: "About", href: "#about" },

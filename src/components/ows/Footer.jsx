@@ -1,6 +1,6 @@
 import React from "react";
 import { Mail, Phone, MapPin } from "lucide-react";
-import owsLogo from "@/assets/ows-logo.svg";
+import owsLogo from "@/assets/ows-logo.png";
 
 const QUICK_LINKS = [
   { label: "About", href: "#about" },
