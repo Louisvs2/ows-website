@@ -18,8 +18,7 @@ export default function HeroSection() {
       >
         <source src={BG_VIDEO} type="video/mp4" />
       </video>
-      <div className="absolute inset-0 bg-deep-carbon/85" />
-      <div className="absolute inset-0 bg-gradient-to-r from-deep-carbon/90 via-deep-carbon/60 to-deep-carbon/40" />
+      <div className="absolute inset-0 bg-gradient-to-r from-deep-carbon/80 via-deep-carbon/40 to-deep-carbon/10" />
       <div className="absolute inset-0 opacity-[0.03]" style={{
         backgroundImage: "linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px)",
         backgroundSize: "80px 80px"
