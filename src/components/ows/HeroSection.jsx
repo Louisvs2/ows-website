@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import owsLogo from "@/assets/ows-logo.png";
@@ -7,10 +7,33 @@ const BG_VIDEO = "/hero-video.mp4";
 const BG_VIDEO_POSTER = "/hero-poster.jpg";
 
 export default function HeroSection() {
+  const sectionRef = useRef(null);
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    const section = sectionRef.current;
+    if (!video || !section) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          video.play().catch(() => {});
+        } else {
+          video.pause();
+        }
+      },
+      { threshold: 0 }
+    );
+    observer.observe(section);
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden bg-deep-carbon">
+    <section ref={sectionRef} className="relative min-h-screen flex items-center overflow-hidden bg-deep-carbon">
       {/* Background Video */}
       <video
+        ref={videoRef}
         autoPlay
         loop
         muted
@@ -26,7 +49,7 @@ export default function HeroSection() {
         backgroundImage: "linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px)",
         backgroundSize: "80px 80px"
       }} />
-      <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-[600px] h-[600px] bg-ows-purple/30 rounded-full blur-[150px]" />
+      <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-[600px] h-[600px] bg-ows-purple/30 rounded-full blur-[90px]" />
 
       <div className="relative z-10 max-w-6xl mx-auto px-6 w-full pt-32 pb-20">
         <div className="max-w-3xl">
