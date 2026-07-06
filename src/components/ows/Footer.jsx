@@ -10,7 +10,7 @@ const QUICK_LINKS = [
 
 export default function Footer() {
   return (
-    <footer id="contact" className="relative bg-deep-carbon text-white">
+    <footer className="relative bg-deep-carbon text-white">
       <div className="max-w-6xl mx-auto px-6 py-16 lg:py-20">
         {/* Top section */}
         <div className="grid md:grid-cols-3 gap-12 mb-12">

@@ -4,6 +4,7 @@ import HeroSection from "@/components/ows/HeroSection";
 import AboutSection from "@/components/ows/AboutSection";
 import ProductsSection from "@/components/ows/ProductsSection";
 import GlobalSection from "@/components/ows/GlobalSection";
+import ContactSection from "@/components/ows/ContactSection";
 import Footer from "@/components/ows/Footer";
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
       <AboutSection />
       <ProductsSection />
       <GlobalSection />
+      <ContactSection />
       <Footer />
     </div>
   );
