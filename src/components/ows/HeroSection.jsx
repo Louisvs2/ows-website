@@ -3,7 +3,8 @@ import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import owsLogo from "@/assets/ows-logo.png";
 
-const BG_VIDEO = "https://media.base44.com/videos/public/6a4bbdb2a3cc8316b36507ce/3921060a0_ScreenRecording_07-06-202617-30-35_1.mov";
+const BG_VIDEO = "/hero-video.mp4";
+const BG_VIDEO_POSTER = "/hero-poster.jpg";
 
 export default function HeroSection() {
   return (
@@ -15,6 +16,7 @@ export default function HeroSection() {
         muted
         playsInline
         preload="auto"
+        poster={BG_VIDEO_POSTER}
         className="absolute inset-0 w-full h-full object-cover"
       >
         <source src={BG_VIDEO} type="video/mp4" />
