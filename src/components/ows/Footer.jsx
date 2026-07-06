@@ -1,5 +1,6 @@
 import React from "react";
 import { Mail, Phone, MapPin } from "lucide-react";
+import owsLogo from "@/assets/ows-logo.svg";
 
 const QUICK_LINKS = [
   { label: "About", href: "#about" },
@@ -16,7 +17,7 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <img
-              src="https://media.base44.com/images/public/6a4bbdb2a3cc8316b36507ce/a278278aa_D807AEC0-6097-4D03-9BED-E1624B6F511C.png"
+              src={owsLogo}
               alt="OWS - Made in Germany"
               className="h-16 w-auto mb-6"
             />

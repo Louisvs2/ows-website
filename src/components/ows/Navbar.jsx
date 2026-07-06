@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import owsLogo from "@/assets/ows-logo.svg";
 
 const NAV_LINKS = [
   { label: "About", href: "#about" },
@@ -32,7 +33,7 @@ export default function Navbar() {
           {/* Logo */}
           <a href="#" className="flex items-center">
             <img
-              src="https://media.base44.com/images/public/6a4bbdb2a3cc8316b36507ce/a278278aa_D807AEC0-6097-4D03-9BED-E1624B6F511C.png"
+              src={owsLogo}
               alt="OWS - Made in Germany"
               className="h-12 lg:h-14 w-auto"
             />

@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
+import owsLogo from "@/assets/ows-logo.svg";
 
 const BG_VIDEO = "https://media.base44.com/videos/public/6a4bbdb2a3cc8316b36507ce/3921060a0_ScreenRecording_07-06-202617-30-35_1.mov";
 
@@ -34,7 +35,7 @@ export default function HeroSection() {
             className="mb-10"
           >
             <img
-              src="https://media.base44.com/images/public/6a4bbdb2a3cc8316b36507ce/a278278aa_D807AEC0-6097-4D03-9BED-E1624B6F511C.png"
+              src={owsLogo}
               alt="OWS - Made in Germany"
               className="h-24 lg:h-28 w-auto"
             />
