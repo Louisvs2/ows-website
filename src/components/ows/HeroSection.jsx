@@ -7,30 +7,20 @@ const BG_VIDEO = "/hero-video.mp4";
 const BG_VIDEO_POSTER = "/hero-poster.jpg";
 
 export default function HeroSection() {
-  const sectionRef = useRef(null);
   const videoRef = useRef(null);
 
   useEffect(() => {
     const video = videoRef.current;
-    const section = sectionRef.current;
-    if (!video || !section) return;
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          video.play().catch(() => {});
-        } else {
-          video.pause();
-        }
-      },
-      { threshold: 0 }
-    );
-    observer.observe(section);
-    return () => observer.disconnect();
+    if (!video) return;
+    // Belt-and-suspenders autoplay kick: some mobile browsers ignore the
+    // autoplay attribute unless muted is also set as a DOM property (not
+    // just an attribute) before play() is requested.
+    video.muted = true;
+    video.play().catch(() => {});
   }, []);
 
   return (
-    <section ref={sectionRef} className="relative min-h-screen flex items-center overflow-hidden bg-deep-carbon">
+    <section className="relative min-h-screen flex items-center overflow-hidden bg-deep-carbon">
       {/* Background Video */}
       <video
         ref={videoRef}
